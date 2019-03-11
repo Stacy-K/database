@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Kitchen</title>
+</head>
+<body>
+  <h1>Welcome to Kitchen Goods!</h1>
+  <div align="center" style="color:#00FF00"><a href="/comeback">Your Home Page</a></div>
+  <!-- <div>{{data}}</div>
+
+  <div>
+  	{% for n in data %}
+  	<div>{{n}}</div>
+  	{% endfor %}
+  </div> -->
+  <h3>We have goods below</h3>
+  <table>
+    <thead>
+      <th>Department</th>
+      <th>Description</th>
+      <th>Product_name</th>
+      <th>Product_ID</th>
+      <th>price per item</th>
+      <th></th>
+    </thead>
+    <tbody>
+      {% for d in depart_info %}
+      <tr>
+        <td>{{ d.Tname }}</td>
+        <td>{{ d.des }}</td>
+        <td>{{ d.Pname }}</td>
+        <td>{{ d.PID }}</td>
+        <td>{{ d.price }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p></p>
+  <p>You can add something to your wish list now.</p>
+  <form method="POST" action="/addWish">
+    <p> choose one product to add to your wish list:
+      <!-- <label for="u_id">user_id</label>
+      <input type="text" name="u_id"> -->
+      <label for="p_id">product_ID</label>
+      <input type="text" name="p_id">
+      <label for="quan">Quantity</label>
+      <input type="number" name="quan">
+      <input type="submit" value="add"></p>
+    </form>
+  <form method="GET" action="/_search">
+  	<p>Search a product using its id:
+  		<input type="text" name="id">
+  		<input type="submit" value="search"></p>
+  	</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+<body background="{{ img }}">
+  <h1>Come Buy!</h1>
+ <!--  <img src="{{ img }}" alt="Back Image"> -->
+  <!-- <div>{{data}}</div>
+  <div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div> -->
+<p>You should generate ID by yourself and the format is Uxxxx(no limited bits).</p>
+<p>The username is whatever your like.</p>
+<form method="POST" action="/add">
+<p>create an account: 
+  <label for="id" >ID</label>
+  <input type="text" name="id"> 
+  <label for="pwd" >Password</label>
+  <input type="Password" name="pwd">
+  <label for="name" >Name</label>
+  <input type="text" name="name"> 
+  <label for="tel" >telephone</label>
+  <input type="text" name="tel"> 
+  <label for="birth" >date_of_birth</label>
+  <input type="date" name="birth"> 
+
+  <input type="submit" value="Add"></p>
+</form>
+
+<form method="GET" action="/users">
+    <p>log in with id and password:
+      <label for="id">user id</label>
+      <input type="text" name="id">
+      <label for='pwd'>Password</label>
+      <input type="Password" name="pwd">
+      <input type="submit" value="submit"></p>
+</form>
+<!-- <p>
+<img src="./back_img/P3.jpg" width="128" height="128" />
+</p> -->
+</body>
+
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>show</title>
+</head>
+<body>
+  <h1>See what is in stock</h1>
+  <div align="center" style="color:#00FF00"><a href="/comeback">Your Home Page</a></div>
+  
+  <!-- <div>{{data}}</div>
+
+  <div>
+  	{% for n in data %}
+  	<div>{{n}}</div>
+  	{% endfor %}
+  </div> -->
+  <table>
+    <thead>
+      <th>Piece_ID</th>
+      <th>Product_name</th>
+      <th>price per item</th>
+    </thead>
+    <tbody>
+      {% for p in piece_info %}
+      <tr>
+        <td>{{ p.Piece }}</td>
+        <td>{{ p.PID }}</td>
+        <td>{{ p.price }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p></p>
+  <p></p>
+  <p>Add to your order</p>
+  <form method="POST" action="/_order">
+  	<p>enter piece id:
+  		<input type="text" name="id">
+  		<input type="submit" name="ordered"></p>
+  	</form>
+
+  <p></p>
+  <a href="/review">See what others thought about the product</a>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+	<title>newly_order</title>
+</head>
+<body>
+	<p>Your newly created order information</p>
+	<div align="center" style="color:#00FF00"><a href="/comeback">Your Home Page</a></div>
+	<table>
+		<thead>
+			<th>Product_ID</th>
+			<th>Product_name</th>
+			<th>Piece_ID</th>
+			<th>Product_price</th>
+			<th>Order's total price</th>
+		</thead>
+		<tbody>
+			{% for n in newly %}
+			<tr>
+				<td>{{ n.PID }}</td>
+				<td>{{ n.Pname }}</td>
+				<td>{{ n.PieceID }}</td>
+				<td>{{ n.price }}</td>
+				<td>{{ n.total }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Users</title>
+</head>
+<body>
+  <h1>Welcome to your account</h1>
+
+  <!-- <div>{{data}}</div>
+  <div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div> -->
+
+  <a href="/u_info">GO to your account info</a>
+
+  <!-- different department entries -->
+  <p></p>
+  <h3>We have 11 departments for you!</h3>
+  <p>Just click</p>
+  <a href="/users/d1">Food</a>
+  <a href="/users/d2">Wearings</a>
+  <a href="/users/d3">Kids</a>
+  <a href="/users/d4">Home</a>
+  <a href="/users/d5">Kitchen</a>
+  <a href="/users/d6">Sports</a>
+  <a href="/users/d7">Pet</a>
+  <a href="/users/d8">Books</a>
+  <a href="/users/d9">Beauty</a>
+  <a href="/users/d10">Health</a>
+  <a href="/users/d11">Office</a>
+  <p></p>
+  
+  <p></p>
+  <a href="/deliver">Deliever Companies</a>
+  <p></p>
+  <p></p>
+
+  <a href="/order_hist">Your order history</a>
+  <p></p>
+  <p></p>
+  
+  <a href="/wish">Your wish list</a>
+  <p></p>
+  <p></p>
+
+  <p>Create a new Order now</p>
+  <form method="POST" action="/_create">
+    <p>choose company and enter address:
+      <label for="id">Company_ID</label>
+      <input type="text" name="id">
+      <label for="addr">Address</label>
+      <input type="text" name="addr">
+      <input type="submit" value="create"></p>
+      <!-- <input type="submit" value="place your created order"> -->
+    </form>
+  <form method= "POST" action="/place">
+    <p>place your order here:
+      <label for="id">Orders_ID</label>
+      <input type="number" name="id">
+    <input type="submit" value="submit">
+  </form>
+  <p><a href="/new_order">your newly created order</a></p>
+  <img src="{{ img }}" alt="User's Image" width="512" height="512">
+</body>
+</html>

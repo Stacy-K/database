@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Order history</title>
+</head>
+<body>
+	<h1>Your Orders</h1>
+	<div align="center" style="color:#00FF00"><a href="/comeback">Your Home Page</a></div>
+	<table>
+		<thead>
+			<th>Order_ID</th>
+			<th>Delivery_company</th>
+			<th>Address</th>
+			<th>Total</th>
+			<th>Status</th>
+		</thead>
+		<tbody>
+			{% for h in hist %}
+			<tr>
+				<td>{{ h.OID }}</td>
+				<td>{{ h.Cname }}</td>
+				<td>{{ h.Addr }}</td>
+				<td>{{ h.total }}</td>
+				<td>{{ h.status }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

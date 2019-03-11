@@ -1,0 +1,26 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+	<title>company info</title>
+</head>
+<body>
+	<h1>Check deliverers</h1>
+	<div align="center" style="color:#00FF00"><a href="/comeback">Your Home Page</a></div>
+	<table>
+		<thead>
+			<th>Company_ID</th>
+			<th>Company_Name</th>
+			<th>Company_telephone</th>			
+		</thead>
+		<tbody>
+			{% for f in firm %}
+			<tr>
+				<td>{{ f.Company_ID }}</td>
+				<td>{{ f.Company_Name }}</td>
+				<td>{{ f.Company_Telephone }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

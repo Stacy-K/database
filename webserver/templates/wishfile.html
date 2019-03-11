@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>WishList</title>
+</head>
+<body>
+	<h1>Your wish list</h1>
+	<div align="center" style="color:#00FF00"><a href="/comeback">Your Home Page</a></div>
+	<table>
+		<thead>
+			<th>product_ID</th>
+			<th>product_name</th>
+			<th>department</th>
+			<th>price per item</th>
+			<th>quantity</th>
+		</thead>
+		<tbody>
+			{% for w in wishlist %}
+			<tr>
+				<td>{{ w.PID }}</td>
+				<td>{{ w.Pname }}</td>
+				<td>{{ w.Tname }}</td>
+				<td>{{ w.price }}</td>
+				<td>{{ w.q }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

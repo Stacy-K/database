@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Review</title>
+</head>
+<body>
+	<h1>Others' Reviews</h1>
+	<div align="center" style="color:#00FF00"><a href="/comeback">Your Home Page</a></div>
+	<table>
+		<thead>
+			<th>Review_ID</th>
+			<th>Reviewer</th>
+			<th>Product_name</th>
+			<th>Content</th>
+			<th>date</th>
+			<th>rate</th>
+		</thead>
+		<tbody>
+			{% for h in history %}
+			<tr>
+				<td>{{ h.RID }}</td>
+				<td>{{ h.Uname }}</td>
+				<td>{{ h.Pname }}</td>
+				<td>{{ h.content }}</td>
+				<td>{{ h.date }}</td>
+				<td>{{ h.rate }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<p></p>
+	<p></p>
+
+	<form method="POST" action="/addReview">
+		<p>add your review here:
+			<label for="content">content</label>
+			<input type="text" name="content">
+			<label for="rate">rate</label>
+			<input type="number" name="rate" min="0" max="5">
+			<input type="submit" value="submit"></p>
+	</form>
+</body>
+</html>
